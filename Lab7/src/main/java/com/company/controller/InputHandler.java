@@ -5,13 +5,13 @@ import com.company.view.Messages;
 
 import java.util.Scanner;
 
-public class InputHandler {
+class InputHandler {
 
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     static int inputInt() {
         while (!InputHandler.scanner.hasNextInt()) {
-            ConsoleView.print(Messages.MENU_WRONG_ITEM_ERROR);
+            ConsoleView.print(Messages.INTEGER_INPUT);
             scanner.nextLine();
         }
         return scanner.nextInt();
@@ -19,7 +19,7 @@ public class InputHandler {
 
     static double inputDouble() {
         while (!InputHandler.scanner.hasNextDouble()) {
-            ConsoleView.print(Messages.MENU_WRONG_ITEM_ERROR);
+            ConsoleView.print(Messages.DOUBLE_INPUT);
             scanner.nextLine();
         }
         return scanner.nextDouble();

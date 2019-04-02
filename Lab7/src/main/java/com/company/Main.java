@@ -4,8 +4,7 @@ import com.company.controller.MenuControler;
 
 public class Main {
     public static void main(String[] args) {
-        MenuControler menu = new MenuControler();
-        menu.run();
+        new MenuControler().run();
 
     }
 

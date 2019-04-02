@@ -16,4 +16,6 @@ public interface Messages {
     String SUM_RECTANGLE = "Sum of all rectangles: ";
 
     String MENU_WRONG_ITEM_ERROR = "Wrong menu item";
+    String INTEGER_INPUT = "\n Enter integer value ";
+    String DOUBLE_INPUT = "\n Enter double value ";
 }
