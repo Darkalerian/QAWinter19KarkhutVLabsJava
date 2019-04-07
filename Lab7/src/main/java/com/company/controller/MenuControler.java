@@ -8,9 +8,9 @@ import java.util.Arrays;
 
 public class MenuControler {
     private Boolean isRunning = false;
-    private Shape[] container = {new Circle("Blue",12), new Circle("Green",22), new Circle(25),
-            new Triangle(12, 12, 13), new Triangle("Blue",20, 12, 12),
-            new Rectangle("Green",10, 10), new Rectangle("Blue",20, 20), new Rectangle(30, 30), new Rectangle("Yellow",12, 15)};
+    private Shape[] container = {new Circle("Blue", 12), new Circle("Green", 22), new Circle(25),
+            new Triangle(12, 12, 13), new Triangle("Blue", 20, 12, 12),
+            new Rectangle("Green", 10, 10), new Rectangle("Blue", 20, 20), new Rectangle(30, 30), new Rectangle("Yellow", 12, 15)};
 
     public void run() {
         while (!isRunning) {
@@ -45,6 +45,16 @@ public class MenuControler {
             case 5:
                 ConsoleView.print(Messages.SUM_TRIANGLE);
                 ConsoleView.print(AreaSumCalculator.calcAreaByTypeTriangle(container));
+                break;
+
+            case 6:
+                Arrays.sort(container, new CompareShapeByArea());
+                ConsoleView.print(Arrays.toString(container));
+                break;
+
+            case 7:
+                Arrays.sort(container, new CompareShapeByColor());
+                ConsoleView.print(Arrays.toString(container));
                 break;
 
             default:

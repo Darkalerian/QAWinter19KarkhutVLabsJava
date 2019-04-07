@@ -7,8 +7,10 @@ public interface Messages {
             "| 1 - Show container items" +
             "| 2 - Show sum of all figures" +
             "| 3 - Show sum of all Circles" +
-            "| 4 - Show sum of all Rectangles" +
-            "| 5 - Show sum of all Triangles" ;
+            "\n| 4 - Show sum of all Rectangles" +
+            "| 5 - Show sum of all Triangles" +
+            "| 6 - Sort shapes by area" +
+            "| 7 - Sort shapes by color";
 
     String SUM_ALL = "Sum of all figures: ";
     String SUM_TRIANGLE = "Sum of all triangles: ";

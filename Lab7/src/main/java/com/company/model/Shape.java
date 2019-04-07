@@ -1,18 +1,20 @@
 package com.company.model;
 
-public class Shape {
+import com.company.view.Drawable;
+
+public abstract class Shape implements Drawable {
 
     private String color;
     private static final String DEFAULT_COLOR = "Red";
 
-    Shape(){
-            this(DEFAULT_COLOR);
+    Shape() {
+        this(DEFAULT_COLOR);
     }
 
     Shape(String color) {
-        if (color!=null) {
-            this.color = color;}
-            else this.color = DEFAULT_COLOR;
+        if (color != null) {
+            this.color = color;
+        } else this.color = DEFAULT_COLOR;
     }
 
     public String getColor() {
@@ -21,11 +23,13 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "ClassName =  " + getClass().getSimpleName() + " Color: "+this.color;
+        return "ClassName =  " + getClass().getSimpleName() + " Color: " + this.color;
     }
 
-    public double calcArea (){
+    public abstract double calcArea();
 
-        return 0.0;
+    @Override
+    public void draw() {
+        System.out.println(this + " area " + this.calcArea());
     }
 }
